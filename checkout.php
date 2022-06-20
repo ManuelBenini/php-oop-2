@@ -26,18 +26,28 @@
             <h4>Nome: <?php echo $user->getName(); ?></h4>
             <h4>Cognome: <?php echo $user->getSurname(); ?></h4>
             <h4>Numero carta: <?php echo $user->getCardNumber(); ?></h4>
-            <h4>Scadenza carta: <?php echo $user->getCardExpiration(); ?></h4>
             <h4>Email: <?php echo $user->getEmail(); ?></h4>
             <h4>Indirizzo: <?php echo $user->getAddress(); ?></h4>
-            <h3>La spesa totale sar&agrave; di: <?php echo $products[$_GET['product']]->getPrice() -  ($products[$_GET['product']]->getPrice() * 20 / 100) ?></h3>
+            <h4 class="mt-3">Scadenza carta: <?php echo $user->getCardExpiration(); ?></h4>
+            <?php if(strtotime($user->getCardExpiration()) > strtotime('now')){ ?>
+                <h5>La carta non è scaduta, può continuare con l'acquisto</h5>
+            <?php }else{ ?>
+                <h5>La carta è scaduta e non può continuare con l'acquisto</h5>
+            <?php }; ?>
+            <h2>La spesa totale sar&agrave; di: <?php echo $products[$_GET['product']]->getPrice() -  ($products[$_GET['product']]->getPrice() * 20 / 100) ?></h2>
         <?php } else{ ?>
             <h2>l'utente non &egrave; registrato, quindi non ricever&agrave; lo sconto del 20&percnt;.</h2>
             <h4>Nome: <?php echo $user->getName(); ?></h4>
             <h4>Cognome: <?php echo $user->getSurname(); ?></h4>
             <h4>Numero carta: <?php echo $user->getCardNumber(); ?></h4>
-            <h4>Scadenza carta: <?php echo $user->getCardExpiration(); ?></h4>
             <h4>Email: <?php echo $user->getEmail(); ?></h4>
             <h4>Indirizzo: <?php echo $user->getAddress(); ?></h4>
+            <h4>Scadenza carta: <?php echo $user->getCardExpiration(); ?></h4>
+            <?php if(strtotime($user->getCardExpiration()) > strtotime('now')){ ?>
+                <h5>La carta non è scaduta, può continuare con l'acquisto</h5>
+            <?php }else{ ?>
+                <h5>La carta è scaduta e non può continuare con l'acquisto</h5>
+            <?php }; ?>
             <h3>La spesa totale sar&agrave; di: <?php echo $products[$_GET['product']]->getPrice()?></h3>
         <?php } ?>
         

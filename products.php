@@ -26,9 +26,9 @@
     $is_user_registered = $_GET['user'];
 
     if($is_user_registered == 1){
-        $user = new RegisteredUser('Ugo', 'De Ughi', 'sonoUGO', '123456789', '19/05/2023' , 'ugodeugi@gmail.com', 'viaSangiovanni' );
+        $user = new RegisteredUser('Ugo', 'De Ughi', 'sonoUGO', '123456789', '19 May 2023' , 'ugodeugi@gmail.com', 'viaSangiovanni' );
     }else{
-        $user = new User('John', 'Wolf', '123456789', '19/05/2023', 'johnwolfe@gmail.com', 'via Cesare Cremonini');
+        $user = new User('John', 'Wolf', '123456789', '19 May 2021', 'johnwolfe@gmail.com', 'via Cesare Cremonini');
     }
 
 ?>
