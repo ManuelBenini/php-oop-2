@@ -10,11 +10,12 @@
         private $type;
         private $material;
 
-        public function __construct($_name, $_price, $_category, $_buy_period, $_type){
+        public function __construct($_name, $_price, $_category, $_buy_period, $_type, $_material){
 
             parent::__construct($_name, $_price, $_category, $_buy_period);
 
             $this->type = $_type;
+            $this->material = $_material;
         }
 
         # setter
