@@ -5,16 +5,16 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require_once __DIR__ . '/head.php' ?>
+    <link rel="stylesheet" href="./css/shop/main.css">
     <title>Dogg-E Shop</title>
 </head>
 <body>
-    <div class="container">
+    <?php require_once __DIR__ . '/header.php' ?>
+
+    <div class="container d-flex justify-content-between">
         <?php foreach($products as $product): ?>
-            <div class="mb-card">
+            <div class="card mb-card d-flex flex-column justify-content-between mt-5">
                 <h4>Category: <?php echo $product->getCategory(); ?></h4>
                 <h4>Type: <?php echo $product->getType(); ?></h4>
                 <h4>Name: <?php echo $product->getName(); ?></h4>
@@ -35,5 +35,6 @@
             </div>
         <?php endforeach; ?>
     </div>
+    <?php require_once __DIR__ . '/footer.php' ?>
 </body>
 </html>

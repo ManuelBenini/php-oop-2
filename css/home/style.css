@@ -1,0 +1,14 @@
+
+h2{
+    margin-bottom: 40px;
+}
+
+
+
+a{
+    border: 2px solid red;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}

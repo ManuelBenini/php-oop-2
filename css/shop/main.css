@@ -1,0 +1,11 @@
+.mb-card{
+    cursor: pointer;
+}
+.mb-card a{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+.mb-card a:hover{
+    color: red;
+}
