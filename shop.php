@@ -19,15 +19,10 @@
                 <h4>Type: <?php echo $product->getType(); ?></h4>
                 <h4>Name: <?php echo $product->getName(); ?></h4>
                 <?php if(method_exists($product, 'getMaterial')){ echo '<h4>Material: '. $product->getMaterial() . '</h4>'; }?>
+                <h4>Disponibility:</h4>
                 <ul>
-                    <li>
-                        <h4>Disponibility:</h4>
-                        <ul>
-                            <li>from <?php echo $product->getBuyPeriodFrom(); ?></li>
-                            <li>to <?php echo $product->getBuyPeriodTo(); ?></li>
-                        </ul>
-                    </li>
-
+                    <li>from <?php echo $product->getBuyPeriodFrom(); ?></li>
+                    <li>to <?php echo $product->getBuyPeriodTo(); ?></li>
                 </ul>
                 <h4>Price: <?php echo $product->getPrice(); ?></h4>
                 <?php if(strtotime($product->getBuyPeriodFrom()) < strtotime('now') AND strtotime($product->getBuyPeriodTo()) > strtotime('now')){ ?>
