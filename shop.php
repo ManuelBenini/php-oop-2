@@ -26,10 +26,10 @@
                 </ul>
                 <h4>Price: <?php echo $product->getPrice(); ?></h4>
                 <?php if(strtotime($product->getBuyPeriodFrom()) < strtotime('now') AND strtotime($product->getBuyPeriodTo()) > strtotime('now')){ ?>
-                    <a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/php-oop-2/checkout.php?user=<?php echo $_GET['user'] ?>&product=<?php echo $selectedProduct; $selectedProduct++?>">Vai all'acquisto</a>
+                    <a href="http://<?php echo $_SERVER['HTTP_HOST'] ?>/php-oop-2/checkout.php?user=<?php echo $_GET['user'] ?>&product=<?php echo $selectedProduct; $selectedProduct++?>">Go to purchase</a>
 
                 <?php }else{ ?>
-                    <span>Non disponibile</span>
+                    <span>Not available</span>
                 <?php } ?>
 
             </div>

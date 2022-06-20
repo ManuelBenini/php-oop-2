@@ -7,6 +7,7 @@
         private $card_expiration;
         private $email;
         private $address;
+        private $discount;
 
         public function __construct($_name, $_surname, $_card_number, $_card_expiration, $_email, $_address){
             $this->name = $_name;
@@ -36,6 +37,9 @@
             public function setAddress($_address){
                 $this->address = $_address;
             }
+            public function setDiscount($_discount){
+                $this->discount = $_discount;
+            }
         #
 
         # getter
@@ -56,6 +60,9 @@
             }
             public function getAddress(){
                 return $this->address;
+            }
+            public function getDiscount(){
+                return $this->discount;
             }
         #
     }

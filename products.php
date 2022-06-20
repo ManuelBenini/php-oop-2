@@ -8,16 +8,16 @@
     $products = [];
     $selectedProduct = 0;
 
-    $cat_game_1 = new CatGame('palla', 150, 'gioco per gatti', 'January', 'July', 'umore', 'legno');
+    $cat_game_1 = new CatGame('Ball', 150, 'Games for cats', 'January', 'July', 'Humour', 'Wood');
     $products[] = $cat_game_1;
 
-    $cat_food_1 = new CatFood('tonno', 150, 'cibo per gatti', 'July', 'October', 'cibo' );
+    $cat_food_1 = new CatFood('fish', 150, 'Food for cats', 'July', 'October', 'Food' );
     $products[] = $cat_food_1;
 
-    $dog_game_1 = new DogGame('palla', 210, 'gioco per cani', 'January', 'December', 'umore', 'plastica');
+    $dog_game_1 = new DogGame('Ball', 210, 'Games for dogs', 'January', 'December', 'Humour', 'Plastic');
     $products[] = $dog_game_1;
 
-    $dog_food_1 = new DogFood('biscottini', 150, 'cibo per cani', 'January', 'March', 'cibo');
+    $dog_food_1 = new DogFood('Biscuits', 150, 'Food for dogs', 'January', 'March', 'Food');
     $products[] = $dog_food_1;
 
     require_once __DIR__ . '/class/user/User.php';
