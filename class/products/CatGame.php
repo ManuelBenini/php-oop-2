@@ -6,13 +6,14 @@
         private $name;
         private $price;
         private $category;
-        private $buy_period;
+        private $buy_period_from;
+        private $buy_period_to;
         private $type;
         private $material;
 
-        public function __construct($_name, $_price, $_category, $_buy_period, $_type, $_material){
+        public function __construct($_name, $_price, $_category, $_buy_period_from, $_buy_period_to, $_type, $_material){
 
-            parent::__construct($_name, $_price, $_category, $_buy_period);
+            parent::__construct($_name, $_price, $_category, $_buy_period_from, $_buy_period_to);
 
             $this->type = $_type;
             $this->material = $_material;
