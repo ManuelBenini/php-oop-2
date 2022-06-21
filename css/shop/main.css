@@ -1,5 +1,6 @@
 .mb-card{
     cursor: pointer;
+    max-width: 300px;
 }
 .mb-card a{
     color: black;

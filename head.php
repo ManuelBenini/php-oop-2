@@ -12,4 +12,4 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
 
-    <!-- Chiusura tag Head rimandato ai vari file di destinazione -->
+    <!-- Chiusura tag Head rimandato ai vari file di destinazione per permettere di aggiungere altri file CSS e titoli pagina -->

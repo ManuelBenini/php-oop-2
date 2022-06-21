@@ -1,34 +1,30 @@
 <?php 
 
-    require_once __DIR__ . '/class/products/DogGame.php';
-    require_once __DIR__ . '/class/products/DogFood.php';
-    require_once __DIR__ . '/class/products/CatGame.php';
-    require_once __DIR__ . '/class/products/CatFood.php';
+    require_once __DIR__ . '/class/products/AnimalGame.php';
+    require_once __DIR__ . '/class/products/AnimalFood.php';
 
+    # array contenente tutti i prodotti del sito. Verranno ciclati nella pagina "Shop"
     $products = [];
+
+    # variabile numerica che ci permetterà di capire con precisione quale prodotto è stato selezionato dall'utente
     $selectedProduct = 0;
 
-    $cat_game_1 = new CatGame('Ball', 150, 'Games for cats', 'January', 'July', 'Humour', 'Wood');
-    $products[] = $cat_game_1;
+    # istanze e push dentro l'array dei prodotti
+        $cat_food_1 = new AnimalFood('fish', 170, 'Food for cats', 'January', 'July', 992245, 50 );
+        $cat_food_1->setDescription('Fish for every cat in the world! Nutritious and...Expensive');
+        $products[] = $cat_food_1;
 
-    $cat_food_1 = new CatFood('fish', 150, 'Food for cats', 'July', 'October', 'Food' );
-    $products[] = $cat_food_1;
+        $dog_food_1 = new AnimalFood('Biscuits', 150, 'Food for dogs', 'January', 'March', 912323, 30);
+        $dog_food_1->setDescription('Biscuits for every dog in the world! Nutrients and...Expensive');
+        $products[] = $dog_food_1;
 
-    $dog_game_1 = new DogGame('Ball', 210, 'Games for dogs', 'January', 'December', 'Humour', 'Plastic');
-    $products[] = $dog_game_1;
+        $cat_game_1 = new AnimalGame('Ball', 110, 'Games for cats', 'January', 'December', 'Humour', 'Wood');
+        $cat_game_1->setDescription('The "ball", not a simple ball...');
+        $products[] = $cat_game_1;
 
-    $dog_food_1 = new DogFood('Biscuits', 150, 'Food for dogs', 'January', 'March', 'Food');
-    $products[] = $dog_food_1;
-
-    require_once __DIR__ . '/class/user/User.php';
-    require_once __DIR__ . '/class/user/RegisteredUser.php';
-
-    $is_user_registered = $_GET['user'];
-
-    if($is_user_registered == 1){
-        $user = new RegisteredUser('Ugo', 'De Ughi', 'sonoUGO', '123456789', '19 May 2023' , 'ugodeugi@gmail.com', 'viaSangiovanni' );
-    }else{
-        $user = new User('John', 'Wolf', '123456789', '19 May 2021', 'johnwolfe@gmail.com', 'via Cesare Cremonini');
-    }
+        $dog_game_1 = new AnimalGame('Bone', 210, 'Games for dogs', 'July', 'October', 'Humour', 'Plastic');
+        $dog_game_1->setDescription('The ultimate bone!');
+        $products[] = $dog_game_1;
+    #
 
 ?>
