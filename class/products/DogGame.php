@@ -3,11 +3,6 @@
     require_once __DIR__ . '/Product.php';
 
     class DogGame extends Product{
-        private $name;
-        private $price;
-        private $category;
-        private $buy_period_from;
-        private $buy_period_to;
         private $type;
         private $material;
 
